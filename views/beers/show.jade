@@ -1,0 +1,11 @@
+h2 {{beer.name}}
+h3 {{ msg }}
+
+ul
+	li Nome: {{ beer.name }}
+	li Categoria: {{ beer.category }}
+	li Preço: {{ beer.price }}
+	li Alcohol: {{ beer.alcohol }}
+	li Descrição: {{ beer.description }}
+	li 
+		a(href="/beers/{{beer._id}}/edit") Editar

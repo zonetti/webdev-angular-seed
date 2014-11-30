@@ -1,0 +1,26 @@
+h2 Listagem Cervejarias
+
+table.table.table-striped
+	tr
+		th Nome
+		th Cidade
+		th Estado
+		th País
+		th Cervejas
+		th Ações
+
+	tr(data-ng-repeat='brewery in breweries')
+		td 
+			a(href="/breweries/{{brewery._id}}") {{brewery.name}}
+		td
+			{{brewery.city}}
+		td
+			{{brewery.state}}
+		td 
+			{{brewery.country}}
+		td 
+			span(style="padding:5px;background:#E33;color:#FFF;margin:5px", data-ng-repeat="beer in brewery.beers") {{beer.name}}
+		td 
+			button.btn.btn-danger(data-ng-click="delete(brewery)")
+				| Deletar
+

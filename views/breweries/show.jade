@@ -1,0 +1,12 @@
+h2 {{brewery.name}}
+h3 {{ msg }}
+
+ul
+	li Nome: {{ brewery.name }}
+	li Cidade: {{ brewery.city }}
+	li Estado: {{ brewery.state }}
+	li País: {{ brewery.country }}
+	li Cervejas:
+		span(data-ng-repeat="beer in brewery.beers") {{beer.name}}
+	li 
+		a(href="/breweries/{{brewery._id}}/edit") Editar
